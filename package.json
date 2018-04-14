@@ -27,6 +27,6 @@
     "npm": "^5.8.0"
   },
   "devDependencies": {
-		"np": "*"
-	}
+    "np": "*"
+  }
 }
