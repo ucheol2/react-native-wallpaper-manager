@@ -20,7 +20,7 @@ Set images as wallpaper in your react-native app.
 
     WallPaperManager.setWallPaper({uri: 'http://example.com/test.png'}, (res)=> console.log(res));
 ```
-  
+
 ## Contact
 
 - Email:[agrimprasad@gmail.com](mailto:agrimprasad@gmail.com)
@@ -28,5 +28,5 @@ Set images as wallpaper in your react-native app.
 ## Credits
 
 - Email:[liuhong1.happy@163.com](mailto:liuhong1.happy@163.com)
-- Forked from the original [react-native-wallpaper-manager](https://github.com/liuhong1happy/react-native-wallpaper-manager) as its npm release hadn't been updated despite breaking compatibility with latest npm versions.
+- Forked from the original [react-native-wallpaper-manager](https://github.com/liuhong1happy/react-native-wallpaper-manager) as its npm release hadn't been updated despite critical bug fixes.
   
