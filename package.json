@@ -1,24 +1,32 @@
 {
-  "name": "react-native-wallpaper-manager",
+  "name": "react-native-wallpaper-enhanced",
   "version": "0.3.16",
-  "description": "set Wallpaper with react-native",
+  "description": "Set images as wallpaper in your react-native app.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "release": "np"
   },
   "keywords": [
     "react-native",
     "react-native-wallpaper",
-    "react-native-wallpaper-manager"
+    "react-native-wallpaper-manager",
+    "react-native-wallpaper-enhanced"
   ],
-  "author": "holly liu",
+  "author": "Agrim Prasad",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liuhong1happy/react-native-wallpaper-manager.git"
+    "url": "git@github.com:AgrimPrasad/react-native-wallpaper-manager.git"
   },
   "bugs": {
-    "url": "https://github.com/liuhong1happy/react-native-wallpaper-manager/issues"
+    "url": "https://github.com/AgrimPrasad/react-native-wallpaper-manager/issues"
   },
-  "homepage": "https://github.com/liuhong1happy/react-native-wallpaper-manager#readme"
+  "homepage": "https://github.com/AgrimPrasad/react-native-wallpaper-manager#readme",
+  "dependencies": {
+    "npm": "^5.8.0"
+  },
+  "devDependencies": {
+		"np": "*"
+	}
 }

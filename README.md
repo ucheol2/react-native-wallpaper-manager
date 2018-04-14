@@ -1,21 +1,32 @@
-# react-native-wallpaper-manager
+# react-native-wallpaper-enhanced
 
-set Wallpaper with react-native
+Set images as wallpaper in your react-native app.
 
 ## Install
 
-    npm install --save react-native-wallpaper-manager
-  
-## Link
+```console
 
-    react-native link react-native-wallpaper-manager
+    npm install --save react-native-wallpaper-enhanced
+    OR
+    yarn add react-native-wallpaper-enhanced
+
+    react-native link react-native-wallpaper-enhanced
+```
   
 ## Usage
 
-    import WallPaperManager from 'react-native-wallpaper-manager';
+```js
+    import WallPaperManager from 'react-native-wallpaper-enhanced';
+
     WallPaperManager.setWallPaper({uri: 'http://example.com/test.png'}, (res)=> console.log(res));
+```
   
-## Concat
+## Contact
+
+- Email:[agrimprasad@gmail.com](mailto:agrimprasad@gmail.com)
+
+## Credits
 
 - Email:[liuhong1.happy@163.com](mailto:liuhong1.happy@163.com)
+- Forked from the original [react-native-wallpaper-manager](https://github.com/liuhong1happy/react-native-wallpaper-manager) as its npm release hadn't been updated despite breaking compatibility with latest npm versions.
   
