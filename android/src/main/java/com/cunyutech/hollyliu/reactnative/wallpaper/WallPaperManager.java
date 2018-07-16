@@ -75,6 +75,7 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
 
         final String source = params.hasKey("uri") ? params.getString("uri") : null;
         ReadableMap headers = params.hasKey("headers") ? params.getMap("headers") : null;
+        int whichScreen = params.hasKey("screen") ? (params.getString("screen") == "lock" ? WallpaperManager.FLAG_LOCK : WallpaperManager.FLAG_SYSTEM) : 0;
 
         if(rctCallback!=null){
             WritableMap map = Arguments.createMap();
@@ -89,7 +90,7 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
         rctCallback = callback;
         rctParams = params;
 
-        final SimpleTarget<byte[]> simpleTarget = this.getSimpleTarget(source);
+        final SimpleTarget<byte[]> simpleTarget = this.getSimpleTarget(source, whichScreen);
         mCurrentActivity = getCurrentActivity();
         if(mCurrentActivity==null){
             sendMessage("error","CurrentActivity is null",source);
@@ -218,7 +219,7 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
         }
     }
 
-    private SimpleTarget<byte[]> getSimpleTarget(final String source){
+    private SimpleTarget<byte[]> getSimpleTarget(final String source, int which){
         return new SimpleTarget<byte[]>(1080, 1920){
             @Override
             public void onResourceReady(byte[] resource, GlideAnimation<? super byte[]> glideAnimation) {
@@ -226,7 +227,7 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
                 try
                 {
                     wallpaperManager.setBitmap(bitmap);
-                    sendMessage("success","Set Wallpaper Success",source);
+                    sendMessage("success","Set Wallpaper Success",source, null, true, which);
                 }
                 catch (Exception e)
                 {
