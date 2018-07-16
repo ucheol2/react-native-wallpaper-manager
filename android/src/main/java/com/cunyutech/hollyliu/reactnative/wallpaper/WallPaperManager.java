@@ -96,7 +96,7 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
         }
 
         //handle base64
-        if ("data:image/png;base64,".startsWith(source)){
+        if (source.startsWith("data:image/png;base64,")){
             mCurrentActivity.runOnUiThread(new Runnable() {
                 public void run() {
                     ThreadUtil.assertMainThread();
