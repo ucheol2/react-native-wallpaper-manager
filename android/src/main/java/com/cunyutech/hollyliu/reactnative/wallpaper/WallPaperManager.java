@@ -75,7 +75,10 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
 
         final String source = params.hasKey("uri") ? params.getString("uri") : null;
         ReadableMap headers = params.hasKey("headers") ? params.getMap("headers") : null;
-        int whichScreen = params.hasKey("screen") ? (params.getString("screen") == "lock" ? WallpaperManager.FLAG_LOCK : WallpaperManager.FLAG_SYSTEM) : 0;
+        int whichScreen = WallpaperManager.FLAG_LOCK | WallpaperManager.FLAG_SYSTEM;
+        if (params.hasKey("screen")) {
+          whichScreen = params.getString("screen") == "lock" ? WallpaperManager.FLAG_LOCK : WallpaperManager.FLAG_SYSTEM;
+        }
 
         if(rctCallback!=null){
             WritableMap map = Arguments.createMap();
