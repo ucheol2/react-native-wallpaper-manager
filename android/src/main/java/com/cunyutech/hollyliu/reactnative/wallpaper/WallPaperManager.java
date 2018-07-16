@@ -219,7 +219,7 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
         }
     }
 
-    private SimpleTarget<byte[]> getSimpleTarget(final String source, int which){
+    private SimpleTarget<byte[]> getSimpleTarget(final String source, final int which){
         return new SimpleTarget<byte[]>(1080, 1920){
             @Override
             public void onResourceReady(byte[] resource, GlideAnimation<? super byte[]> glideAnimation) {
