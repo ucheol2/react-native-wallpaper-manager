@@ -226,8 +226,8 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
                 Bitmap bitmap = BitmapFactory.decodeByteArray(resource, 0, resource.length);
                 try
                 {
-                    wallpaperManager.setBitmap(bitmap);
-                    sendMessage("success","Set Wallpaper Success",source, null, true, which);
+                    wallpaperManager.setBitmap(bitmap, null, true, which);
+                    sendMessage("success","Set Wallpaper Success",source);
                 }
                 catch (Exception e)
                 {
