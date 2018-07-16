@@ -76,9 +76,9 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
         final String source = params.hasKey("uri") ? params.getString("uri") : null;
         ReadableMap headers = params.hasKey("headers") ? params.getMap("headers") : null;
         int whichScreen = WallpaperManager.FLAG_LOCK | WallpaperManager.FLAG_SYSTEM;
+
         if (params.hasKey("screen")) {
-          whichScreen = params.getString("screen") == "lock" ? WallpaperManager.FLAG_LOCK : WallpaperManager.FLAG_SYSTEM;
-          sendMessage("log", params.getString("screen") + params.getString("screen") == "lock" ? " true" : " false", source);
+          whichScreen = params.getString("screen").equals("lock") ? WallpaperManager.FLAG_LOCK : WallpaperManager.FLAG_SYSTEM;
         }
 
         if(rctCallback!=null){
