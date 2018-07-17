@@ -230,7 +230,7 @@ public class WallPaperManager extends ReactContextBaseJavaModule {
                 Bitmap bitmap = BitmapFactory.decodeByteArray(resource, 0, resource.length);
                 try
                 {
-                  if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
+                  if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.N) {
                     wallpaperManager.setBitmap(bitmap);
                   } else {
                     wallpaperManager.setBitmap(bitmap, null, true, which);
