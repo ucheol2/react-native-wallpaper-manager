@@ -10,20 +10,20 @@ buildscript {
 
 apply plugin: 'com.android.library'
 
-//android {
-  //compileSdkVersion 24
-  //buildToolsVersion "23.0.1"
+android {
+  compileSdkVersion 27
+  buildToolsVersion "23.0.3"
 
-  //defaultConfig {
-    //minSdkVersion 14
-    //targetSdkVersion 24
-    //versionCode 1
-    //versionName "1.0"
-  //}
-  //lintOptions {
-    //abortOnError false
-  //}
-//}
+  defaultConfig {
+    minSdkVersion 16
+    targetSdkVersion 26
+    versionCode 1
+    versionName "1.0"
+  }
+  lintOptions {
+    abortOnError false
+  }
+}
 
 repositories {
   mavenCentral()
